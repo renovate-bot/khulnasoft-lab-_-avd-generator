@@ -79,7 +79,7 @@ jobs:
       - name: Checkout private chain-bench-repo
         uses: actions/checkout@v3
         with:
-          repository: khulnasoft-lab/chain-bench
+          repository: khulnasoft-lab/oss-chain-bench
           token: ${{ secrets.ORG_REPO_TOKEN }}
           path: avd-repo/chain-bench-repo
 
