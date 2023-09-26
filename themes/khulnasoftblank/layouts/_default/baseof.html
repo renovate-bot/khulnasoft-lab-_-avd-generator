@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
+	<link rel="icon" type="image/png" href="{{ "favicon_192x192.png" | relURL }}" sizes="192x192" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon-180x180.png" | relURL }}" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+	{{ .Scratch.Set "seo_title" "Khulnasoft Security" }}
+	{{ .Scratch.Set "seo_description" "" }}
+
+	{{ if .IsHome }}
+	{{ .Scratch.Set "seo_title" "Vulnerability Database | Khulnasoft Security" }}
+	{{ .Scratch.Set "seo_description" "Detailed information and remediation guidance for vulnerabilities and weaknesses published by NVD, software vendor advisories, and analysis of container images." }}
+
+	{{ else }}
+
+	{{ .Scratch.Set "seo_title" .Title | safeHTML }}
+	{{ .Scratch.Add "seo_title" " | Vulnerability Database | Khulnasoft Security" }}
+
+		{{ if eq "nvd_page" .Params.avd_page_type }}
+			{{ .Scratch.Set "seo_description" .Title | safeHTML }}
+			{{ .Scratch.Add "seo_description" " Vulnerability, " }}
+			{{ .Scratch.Add "seo_description" "Severity " }}
+			{{ .Scratch.Add "seo_description" .Params.cvss_nvd_v3_score | safeHTML }}
+			{{ .Scratch.Add "seo_description" " " }}
+			{{ .Scratch.Add "seo_description" .Params.cvss_nvd_v3_severity | safeHTML }}
+			{{ .Scratch.Add "seo_description" ", " }}
+			{{ .Scratch.Add "seo_description" (.Params.header_subtitle | safeHTML | truncate 110) }}
+		{{ else }}
+			{{ .Scratch.Set "seo_description" .Title | safeHTML }}
+			{{ .Scratch.Add "seo_description" " | " }}
+			{{ .Scratch.Add "seo_description" (.Params.id | safeHTML | truncate 150) }}
+			{{ .Scratch.Add "seo_description" " | " }}
+			{{ .Scratch.Add "seo_description" (.Params.severity | safeHTML | truncate 150) }}
+		{{ end }}
+
+	{{ end }}
+
+	<title>{{ .Scratch.Get "seo_title" }}</title>
+	<meta name="description" content="{{ .Scratch.Get "seo_description" }}" />
+
+	<meta property="og:title" content="{{ .Scratch.Get "seo_title" }}" />
+	<meta property="og:site_name" content="Khulnasoft Vulnerability Database" />
+	<meta property="og:description" content="{{ .Scratch.Get "seo_description" }}" />
+
+	<link rel="stylesheet" href='{{ "css/avdblank.min.css" | relURL }}'>
+	<link rel="stylesheet" href='{{ "css/syntax.css" | relURL }}'>
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+	<script type='text/javascript' src='{{ "js/avdblank.js" | relURL }}'></script>
+	<script type='text/javascript' src='{{ "js/iac.js" | relURL }}'></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5N9T3H');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N9T3H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	{{ partial "header" . }}
+
+	{{ if .IsHome }}
+	{{ partial "home.html" . }}
+	{{ else }}
+	{{ block "main" . }}{{ end }}
+	{{ end }}
+
+	{{ partial "footer" . }}
+
+
+</body>
+
+<script src="{{ .Site.BaseURL }}js/fastsearch.js"></script>
+<script src="{{ .Site.BaseURL }}js/meilisearch.js"></script>
+
+</html>

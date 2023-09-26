@@ -18,7 +18,7 @@ md-clone-all:
 	git clone git@github.com:khulnasoft-lab/kube-bench.git avd-repo/kube-bench-repo
 	git clone git@github.com:khulnasoft-lab/chain-bench.git avd-repo/chain-bench-repo
 	git clone git@github.com:khulnasoft-lab/cloud-security-remediation-guides.git avd-repo/remediations-repo
-	git clone git@github.com:khulnasoft-lab/tracee.git avd-repo/tracee-repo
+	git clone git@github.com:khulnasoft-lab/tracker.git avd-repo/tracker-repo
 	git clone git@github.com:khulnasoft-lab/defsec.git avd-repo/defsec-repo
 	git clone git@github.com:khulnasoft-lab/cloudsploit.git avd-repo/cloudsploit-repo
 
@@ -28,7 +28,7 @@ update-all-repos:
 	cd avd-repo/kube-bench-repo && git pull
 	cd avd-repo/chain-bench-repo && git pull
 	cd avd-repo/remediations-repo && git pull
-	cd avd-repo/tracee-repo && git pull
+	cd avd-repo/tracker-repo && git pull
 	cd avd-repo/defsec-repo && git pull
 	cd avd-repo/cloudsploit-repo && git pull
 

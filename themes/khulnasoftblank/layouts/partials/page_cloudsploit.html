@@ -1,0 +1,80 @@
+<!-- hero starts -->
+<div class="avd_hero_wrap animatable">
+    <div class="hero header_wrap is-primary"><!--  is-small -->
+        <!-- header starts -->
+
+        <!--<div class="hero-head"></div>-->
+        <div class="hero-body">
+            <div class="clearboth container">
+                <div class="header_title_wrap">
+					<div class="page_pretitle with_icon khulnasoft fadeInUp">Khulnasoft CSPM</div>
+					{{ if or (.Params.breadcrumb_remediation_parent) (.Params.breadcrumb_remediation_child) }}
+						<div class="page_breadcrumbs fadeInUp animationDelay_1">
+							{{ if .Params.breadcrumb_remediation_parent }}
+								<a href="/cspm#{{ .Params.breadcrumb_remediation_parent }}">{{ .Params.breadcrumb_remediation_parent_name }}</a> ›
+							{{ end }}
+							
+							{{ if .Params.breadcrumb_remediation_child }}
+							<a href="/cspm#{{ .Params.breadcrumb_remediation_child }}">{{ .Params.breadcrumb_remediation_child_name }}</a> ›
+							{{ end }}
+						</div>
+					{{ end }}
+                    <h1 class="title page_title is-spaced fadeInUp animationDelay_1">{{ .Params.display_title }}</h1>
+                    <!--<h2 class="subtitle page_subtitle"></h2>-->
+                </div><!-- header_title_wrap -->
+            </div><!-- container -->
+        </div><!-- hero-body -->
+
+
+
+        {{ if or (.Params.date_published) (.Params.date_modified) }}
+            <div class="hero-foot">
+                <div class="container fadeInUp animationDelay_2">
+
+                    {{ if .Params.date_published }}
+                        <div class="pagetitle_metaitem"><strong>Published:</strong> {{ dateFormat "Jan 02, 2006" .Params.date_published }}</div>
+                    {{ end }}
+
+                    {{ if .Params.date_modified }}
+                        <div class="pagetitle_metaitem"><strong>Modified:</strong> {{ dateFormat "Jan 02, 2006" .Params.date_modified }}</div>
+                    {{ end }}
+                </div>
+            </div><!-- hero-foot -->
+        {{ end }}
+
+    </div><!-- hero -->
+
+</div><!-- hero_wrap -->
+<!-- hero ends -->
+
+<!-- content starts -->
+
+<div class="section avdcve_wrap animatable">
+    <div class="clearboth container">
+
+        <div class="columns is-multiline rever*se-columns">
+            <div class="column is-8-desktop is-6-tablet is-12-mobile fadeInUp animationDelay_4">
+                <div class="vulnerability_content_wrap fadeInUp">
+                    <!--<h4 class="vulnerability_content_title fadeInUp"></h4>-->
+                    <div class="content vulnerability_content">
+                        {{ .Content }}
+                    </div><!-- vulnerability_content -->
+                </div><!-- vulnerability_content_wrap -->
+            </div><!-- column is-8 -->
+
+            <div class="column is-4-desktop is-6-tablet is-12-mobile fadeInUp animationDelay_2">
+                <div class="avdcve_sidebar_wrap">
+                    <a href="https://cloud.khulnasoft.com/signup" target="_blank" class="project_item fadeInUp animationDelay_8">
+                        <div class="project_icon" style="background-image:url('{{ "images/project_logo_khulnasoft_color.png" | relURL }}');"></div>
+                        <h2 class="project_title">Cloud Security Posture Management (CSPM)</h2>
+                        <div class="project_subtitle">Scan, monitor and remediate configuration issues in public cloud accounts according to best practices and compliance standards, across AWS, Azure, Google Cloud, and Oracle Cloud.</div>
+                        <div class="button arrowlinkbutton">Sign up for free</div>
+                    </a>
+                </div>
+            </div><!-- column is-4 -->
+        </div><!-- columns -->
+
+    </div><!-- container -->
+</div>
+
+<!-- content ends -->

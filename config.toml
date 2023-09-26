@@ -43,8 +43,8 @@ hasChildren = true
 
   [[menu.main]]
   parent = "projects"
-  name = "Trivy"
-  url = "trivy"
+  name = "Vul"
+  url = "vul"
   weight = 1
 
   [[menu.main]]

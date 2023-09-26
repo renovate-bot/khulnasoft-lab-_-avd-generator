@@ -1,0 +1,6 @@
+{{- $.Scratch.Add "searchindex" slice -}}
+{{- range .Site.RegularPages -}}
+{{- $primarykey := ( replace ( replace ( replace (strings.TrimSuffix "/" .Permalink)  "https://avd.khulnasoft.com/" "" ) "/" "-") "." "-")}}
+{{- $.Scratch.Add "searchindex" (dict "title" $primarykey "pageTitle" .Title "permalink" .Permalink "summary" .Summary ) -}}
+{{- end -}}
+{{- $.Scratch.Get "searchindex" | jsonify -}}

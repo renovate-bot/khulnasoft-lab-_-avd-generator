@@ -1,0 +1,205 @@
+.hero.is-primary a.nav-item,
+.hero.is-primary .nav-item a:not(.button) {
+	color: rgba(255, 255, 255, 1);
+}
+
+.avd_hero_wrap {
+	position: relative;
+
+	.hero {
+		//padding-bottom: 2.5rem;
+
+		&.header_wrap {
+			//border:1px solid blue;
+
+			.hero-head {
+				//background-color: red;
+				min-height: $navbar-height;
+
+				.header_navbar_wrap {
+					//_header_main_navbar.scss
+				}
+			}
+
+			//hero-head
+
+			.hero-body {
+				padding-top: 1.5rem;
+				padding-bottom: 1.5rem;
+
+				.header_title_wrap {
+					.page_pretitle {
+						font-size: 1.375rem;
+						color: rgba(255, 255, 255, 0.85);
+
+						&.with_icon {
+							&:before {
+								content: "";
+								display: inline-block;
+								position: relative;
+								width: 32px;
+								height: 32px;
+								background-repeat: no-repeat;
+								background-position: center center;
+								margin-right: 8px;
+								margin-bottom: -7px;
+								opacity: 0.85;
+							}
+
+							&.nvd:before {
+								background-image: url("../images/icon_page_cve.png");
+							}
+
+							&.chainbench:before {
+								background-image: url("../images/icon_page_chain_bench.png");
+							}
+
+							&.appshield:before {
+								background-image: url("../images/icon_page_appshield.png");
+							}
+
+							&.iac:before {
+								background-image: url("../images/icon_page_defsec.png");
+							}
+
+							&.kube-hunter:before {
+								background-image: url("../images/icon_page_kube-hunter.png");
+								width: 32px;
+								height: 31px;
+								margin-bottom: -5px;
+								margin-right: 6px;
+							}
+
+							&.cloudsploit:before {
+								background-image: url("../images/icon_page_cloudsploit.png");
+							}
+
+							&.khulnasoft:before {
+								background-image: url("../images/icon_page_khulnasoft.png");
+							}
+
+							&.alibaba:before {
+								background-image: url("../images/icon_tile_alibaba.png");
+							}
+
+							&.aws:before {
+								background-image: url("../images/icon_tile_aws.png");
+							}
+
+							&.azure:before {
+								background-image: url("../images/icon_tile_azure.png");
+							}
+
+							&.cloudstack:before {
+								background-image: url("../images/icon_tile_cloudstack.png");
+							}
+
+							&.digitalocean:before {
+								background-image: url("../images/icon_tile_digitalocean.png");
+							}
+
+							&.dockerfile:before {
+								background-image: url("../images/icon_tile_dockerfile.png");
+							}
+
+							&.github:before {
+								background-image: url("../images/icon_tile_github.png");
+							}
+
+							&.kubernetes:before {
+								background-image: url("../images/icon_tile_kubernetes.png");
+							}
+
+							&.google:before {
+								background-image: url("../images/icon_tile_google.png");
+							}
+
+							&.openstack:before {
+								background-image: url("../images/icon_tile_openstack.png");
+							}
+
+							&.oracle:before {
+								background-image: url("../images/icon_tile_oracle.png");
+							}
+
+							&.tracker:before {
+								background-image: url("../images/icon_page_khulnasoft.png");
+							}
+						}
+
+						//with_icon
+					}
+
+					//page_pretitle
+
+					.page_title {
+						margin-top: 40px;
+						font-size: 3rem;
+					}
+
+					.page_subtitle {
+						font-size: 1.25rem; //1.5rem;
+					}
+
+					.page_pretitle+.page_title {
+						margin-top: 10px;
+					}
+
+					.page_breadcrumbs {
+						font-size: 1.75rem;
+						margin-bottom: -35px;
+						margin-top: 10px;
+						color: $aq-sea-foam;
+
+						a {
+							opacity: 0.85;
+							transition: all 0.2s ease;
+							color: $aq-sea-foam;
+
+							&:hover {
+								opacity: 1;
+							}
+						}
+					}
+				}
+
+				//header_title_wrap
+			}
+
+			//hero-body
+
+			.hero-foot {
+				background-color: $aq-royal-blue-dark;
+				color: #ffffff;
+				padding: 1rem 1.25rem;
+				font-size: 1.125rem;
+
+				.pagetitle_metaitem {
+					display: inline-block;
+					margin-right: 40px;
+
+					&:last-child {
+						margin-right: 0px;
+					}
+
+					strong {
+						color: #ffffff;
+					}
+
+					@include until($tablet) {
+						display: block;
+						margin-bottom: 12px;
+					}
+				}
+
+				//.pagetitle_metaitem
+			}
+		}
+
+		//header_wrap
+	}
+
+	//hero
+}
+
+//hero_wrap
