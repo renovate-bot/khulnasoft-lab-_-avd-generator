@@ -16,7 +16,7 @@ md-clone-all:
 	git clone git@github.com:khulnasoft-lab/vuln-list.git avd-repo/vuln-list
 	git clone git@github.com:khulnasoft-lab/kube-hunter.git avd-repo/kube-hunter-repo
 	git clone git@github.com:khulnasoft-lab/kube-bench.git avd-repo/kube-bench-repo
-	git clone git@github.com:khulnasoft-lab/chain-bench.git avd-repo/chain-bench-repo
+	git clone git@github.com:khulnasoft-lab/oss-chain-bench.git avd-repo/chain-bench-repo
 	git clone git@github.com:khulnasoft-lab/cloud-security-remediation-guides.git avd-repo/remediations-repo
 	git clone git@github.com:khulnasoft-lab/tracker.git avd-repo/tracker-repo
 	git clone git@github.com:khulnasoft-lab/defsec.git avd-repo/defsec-repo
