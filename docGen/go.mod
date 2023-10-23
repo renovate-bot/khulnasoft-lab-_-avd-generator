@@ -7,7 +7,7 @@ require (
 	github.com/leekchan/gtf v0.0.0-20190214083521-5fba33c5b00b
 	github.com/stretchr/testify v1.8.4
 	github.com/umisama/go-cpe v0.0.0-20190323060751-cdd6c3c28a23
-	github.com/valyala/fastjson v1.5.3
+	github.com/valyala/fastjson v1.6.4
 	gopkg.in/yaml.v3 v3.0.1
 )
 
