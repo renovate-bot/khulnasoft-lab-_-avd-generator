@@ -1,6 +1,6 @@
 ---
 title: ELB Logging Enabled 
-avd_page_type: cloudsploit_page
+cvedb_page_type: cloudsploit_page
 ---
 
 # AWS / ELB / ELB Logging Enabled

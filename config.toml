@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 # provide your domain here
-baseURL = "https://avd.khulnasoft.com/"
+baseURL = "https://cvedb.khulnasoft.com/"
 #baseURL = "/"
 
 # theme

@@ -3,8 +3,8 @@ title: Enable Encryption
 id: AVD-AWS-0018
 
 aliases: [
-  "/misconfig/avd-aws-0018",
-  "/misconfig/aws/codebuild/avd-aws-0018",
+  "/misconfig/cvedb-aws-0018",
+  "/misconfig/aws/codebuild/cvedb-aws-0018",
   "/cspm/aws/codebuild/project-artifacts-encrypted",
   "/cspm/aws/code-build/project-artifacts-encrypted",
 
@@ -26,7 +26,7 @@ breadcrumbs:
   - name: Codebuild
     path: /misconfig/aws/codebuild
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 remediations:
   - cloudformation

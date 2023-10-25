@@ -20,7 +20,7 @@ func TestKubeHunterPages(t *testing.T) {
 	gotBytes, err := ioutil.ReadFile(filepath.Join(pagesDir, "KHV002-orig.md"))
 	require.NoError(t, err)
 
-	wantBytes, err := ioutil.ReadFile("../goldens/kube-hunter/KHV002-avd.md")
+	wantBytes, err := ioutil.ReadFile("../goldens/kube-hunter/KHV002-cvedb.md")
 	require.NoError(t, err)
 
 	got := string(gotBytes)

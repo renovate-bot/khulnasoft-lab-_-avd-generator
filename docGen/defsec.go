@@ -11,8 +11,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
-	"github.com/khulnasoft-lab/avd-generator/util"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/util"
 	"gopkg.in/yaml.v3"
 
 	"github.com/khulnasoft-lab/defsec/pkg/framework"
@@ -143,13 +143,13 @@ func generateDefsecComplianceSpecPage(spec DefsecComplianceSpec, contentDir stri
 func generateDefsecPages(remediationDir, contentDir string) {
 	for _, r := range rules.GetRegistered(framework.ALL) {
 
-		avdId := r.Rule().AVDID
+		cvedbId := r.Rule().AVDID
 		topLevelID := strings.ToLower(r.Rule().Provider.ConstName())
 		branchID := r.Rule().Service
 		branchID = util.RemapCategory(branchID)
 
-		log.Printf("Getting remediation markdown for %s", avdId)
-		remediationDir := filepath.Join(remediationDir, strings.ToLower(r.Rule().Provider.ConstName()), strings.ReplaceAll(r.Rule().Service, "-", ""), avdId)
+		log.Printf("Getting remediation markdown for %s", cvedbId)
+		remediationDir := filepath.Join(remediationDir, strings.ToLower(r.Rule().Provider.ConstName()), strings.ReplaceAll(r.Rule().Service, "-", ""), cvedbId)
 
 		remediations := make(map[string]string)
 		docsFile := filepath.Join(remediationDir, "docs.md")
@@ -178,9 +178,9 @@ func generateDefsecPages(remediationDir, contentDir string) {
 		}
 
 		if _, ok := remediations["Management Console"]; !ok {
-			if remediationFile, ok := crossOver[avdId]; ok {
+			if remediationFile, ok := crossOver[cvedbId]; ok {
 				if remediationContent := getRemediationBodyWhereExists(fmt.Sprintf("remediations-repo/%s", remediationFile), true); remediationContent != "" {
-					log.Printf("Can use %s for %s\n", remediationFile, avdId)
+					log.Printf("Can use %s for %s\n", remediationFile, cvedbId)
 					remediations["Management Console"] = remediationContent
 				}
 			}
@@ -353,7 +353,7 @@ breadcrumbs:
   - name: {{ .ServiceName }}
     path: /misconfig/{{ .Provider }}/{{ .Service }}
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 remediations:
 {{ range .Remediations }}  - {{ .}}
@@ -386,7 +386,7 @@ breadcrumbs:
     path: /compliance/{{ .Category }}/{{ .Title }}-{{ .Version}}
 
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 ---
 
@@ -394,7 +394,7 @@ avd_page_type: avd_page
 {{ .Description }}
 
 **Control Checks**
-{{ range .Checks }}* [{{ .ID }}](https://avd.khulnasoft.com/misconfig/{{ .ID | toLower }}){{ .ID | getSummary }}{{ end }}
+{{ range .Checks }}* [{{ .ID }}](https://cvedb.khulnasoft.com/misconfig/{{ .ID | toLower }}){{ .ID | getSummary }}{{ end }}
 
 
 `

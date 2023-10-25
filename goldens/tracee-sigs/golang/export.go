@@ -1,3 +1,3 @@
 package main
 
-// this file is kept for avd generator test only
+// this file is kept for cvedb generator test only

@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 
 	"github.com/Masterminds/semver"
-	"github.com/khulnasoft-lab/avd-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
 	"gopkg.in/yaml.v3"
 )
 
@@ -168,7 +168,7 @@ breadcrumbs:
     path: /compliance/softwaresupplychain/{{ .Version}}/{{ .Version}}-{{ .Category_Lowered}}
 
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 ---
 

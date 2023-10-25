@@ -1,5 +1,5 @@
 ---
-avd_page_type: avd_page 
+cvedb_page_type: cvedb_page 
 icon: kubernetes
 shortName: Kubernetes version disclosure
 source: Kube Hunter

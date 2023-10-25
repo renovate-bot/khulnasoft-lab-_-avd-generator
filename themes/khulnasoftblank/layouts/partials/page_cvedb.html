@@ -1,5 +1,5 @@
 <!-- hero starts -->
-<div class="avd_hero_wrap animatable">
+<div class="cvedb_hero_wrap animatable">
 	<div class="hero header_wrap is-primary">
 		<div class="hero-body">
 			<div class="clearboth container">
@@ -43,14 +43,14 @@
 </div><!-- hero_wrap -->
 <!-- hero ends -->
 <!-- content starts -->
-<div class="section avdcve_wrap animatable">
+<div class="section cvedbcve_wrap animatable">
 	<div class="clearboth container page-fill">
 		<div class="columns is-multiline reverse-columns">
 
 			<div class="column is-3-desktop is-12-tablet is-12-mobile fadeInUp animationDelay_4">
-				<div class="avdcve_sidebar_wrap">
-					<div class="avd_sidebar_widget avdcve_scores_wrap">
-						<div class="avdcve_scores_cvss cvss_{{ if eq .Params.severity "critical"}}10{{end}}{{ if eq
+				<div class="cvedbcve_sidebar_wrap">
+					<div class="cvedb_sidebar_widget cvedbcve_scores_wrap">
+						<div class="cvedbcve_scores_cvss cvss_{{ if eq .Params.severity "critical"}}10{{end}}{{ if eq
 							.Params.severity "high" }}7{{end}}{{ if eq .Params.severity "medium" }}5{{end}}{{ if eq
 							.Params.severity "low" }}3{{end}}{{ if eq .Params.severity "info" }}1{{end}}{{ if eq
 							.Params.severity "unknown" }}0{{end}}">
@@ -72,7 +72,7 @@
 
 
 						</div><!-- large_score_wrap -->
-						<div class="avdcve_scores_additional">
+						<div class="cvedbcve_scores_additional">
 							<div class="score_bar">
 								<div class="score_bar_name">Source</div>
 								<div class="score_bar_label">{{ .Params.source }}</div>
@@ -128,7 +128,7 @@
 					</div>
 
 
-				</div><!-- avdcve_scores_cvss -->
+				</div><!-- cvedbcve_scores_cvss -->
 			</div>
 
 			<div class="column is-9-desktop is-12-tablet is-12-mobile fadeInUp animationDelay_4">

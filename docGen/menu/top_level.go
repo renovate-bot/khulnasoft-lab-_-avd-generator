@@ -103,7 +103,7 @@ breadcrumbs:
     path: {{ .Url }}
 {{ end }}
 
-avd_page_type: {{ .Layout }}
+cvedb_page_type: {{ .Layout }}
 
 {{ if .Tiles }}
 tiles:

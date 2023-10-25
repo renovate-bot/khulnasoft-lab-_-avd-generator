@@ -34,7 +34,7 @@ func generateKubeHunterPages(inputPagesDir string, outputPagesDir string) {
 		title := titleRegex.FindSubmatch(b)[1]
 
 		newContent := strings.Replace(string(b), "---", fmt.Sprintf(`---
-avd_page_type: avd_page 
+cvedb_page_type: cvedb_page 
 icon: kubernetes
 shortName: %s
 source: Kube Hunter

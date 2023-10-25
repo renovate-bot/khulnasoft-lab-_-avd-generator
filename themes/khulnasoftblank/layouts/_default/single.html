@@ -1,15 +1,15 @@
 {{ define "main" }}
 
-	{{ if eq "cloudsploit_page" .Params.avd_page_type }}
+	{{ if eq "cloudsploit_page" .Params.cvedb_page_type }}
 		{{ partial "page_cloudsploit.html" . }}
-	{{ else if eq "search_page" .Params.avd_page_type }}
+	{{ else if eq "search_page" .Params.cvedb_page_type }}
 		{{ partial "page_search.html" . }}
-	{{ else if eq "reserved_page" .Params.avd_page_type }}
+	{{ else if eq "reserved_page" .Params.cvedb_page_type }}
 		{{ partial "page_reserved.html" . }}
-	{{ else if eq "nvd_page" .Params.avd_page_type }}
+	{{ else if eq "nvd_page" .Params.cvedb_page_type }}
 		{{ partial "page_nvd.html" . }}
 	{{ else }}
-		{{ partial "page_avd.html" . }}
+		{{ partial "page_cvedb.html" . }}
 	{{ end }}
 
 {{ end }}

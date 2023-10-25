@@ -21,7 +21,7 @@ breadcrumbs:
     path: /compliance/kubernetes/ack-1.0/ack-1.0-controlplane
 
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 ---
 

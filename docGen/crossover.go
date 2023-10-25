@@ -172,8 +172,8 @@ var reverseCrossOver map[string]string
 func init() {
 	reverseCrossOver = make(map[string]string)
 
-	for avdID, cspmPath := range crossOver {
-		reverseCrossOver[cspmPath] = avdID
+	for cvedbID, cspmPath := range crossOver {
+		reverseCrossOver[cspmPath] = cvedbID
 	}
 }
 
@@ -185,8 +185,8 @@ func getAVDIDByCSPMPath(path string) string {
 	return ""
 }
 
-func getCSPMAliasesForAVDID(avdID string) []string {
-	if aliases, ok := defsecReplacements[avdID]; ok {
+func getCSPMAliasesForAVDID(cvedbID string) []string {
+	if aliases, ok := defsecReplacements[cvedbID]; ok {
 		return aliases
 	}
 	return []string{}

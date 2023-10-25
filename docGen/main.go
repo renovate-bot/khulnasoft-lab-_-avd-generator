@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
 )
 
 var (
@@ -40,13 +40,13 @@ func main() {
 		Years = append(Years, strconv.Itoa(y))
 	}
 
-	generateChainBenchPages("../avd-repo/chain-bench-repo/internal/checks", "../avd-repo/content/compliance")
-	generateKubeBenchPages("../avd-repo/kube-bench-repo/cfg", "../avd-repo/content/compliance")
-	generateDefsecComplianceSpecPages("../avd-repo/defsec-repo/rules/specs/compliance", "../avd-repo/content/compliance")
-	generateKubeHunterPages("../avd-repo/kube-hunter-repo/docs/_kb", "../avd-repo/content/misconfig/kubernetes")
-	generateCloudSploitPages("../avd-repo/cloudsploit-repo/plugins", "../avd-repo/content/misconfig", "../avd-repo/remediations-repo/en")
-	generateTrackerPages("../avd-repo/tracker-repo/signatures", "../avd-repo/content/tracker", realClock{})
-	generateDefsecPages("../avd-repo/defsec-repo/avd_docs", "../avd-repo/content/misconfig")
+	generateChainBenchPages("../cvedb-repo/chain-bench-repo/internal/checks", "../cvedb-repo/content/compliance")
+	generateKubeBenchPages("../cvedb-repo/kube-bench-repo/cfg", "../cvedb-repo/content/compliance")
+	generateDefsecComplianceSpecPages("../cvedb-repo/defsec-repo/rules/specs/compliance", "../cvedb-repo/content/compliance")
+	generateKubeHunterPages("../cvedb-repo/kube-hunter-repo/docs/_kb", "../cvedb-repo/content/misconfig/kubernetes")
+	generateCloudSploitPages("../cvedb-repo/cloudsploit-repo/plugins", "../cvedb-repo/content/misconfig", "../cvedb-repo/remediations-repo/en")
+	generateTrackerPages("../cvedb-repo/tracker-repo/signatures", "../cvedb-repo/content/tracker", realClock{})
+	generateDefsecPages("../cvedb-repo/defsec-repo/cvedb_docs", "../cvedb-repo/content/misconfig")
 
 	generateVulnPages()
 

@@ -12,8 +12,8 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
-	"github.com/khulnasoft-lab/avd-generator/util"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/util"
 )
 
 func generateCloudSploitPages(inputPagesDir, outputPagesDir, remediationsDir string) {
@@ -166,8 +166,8 @@ func generateCloudSploitPages(inputPagesDir, outputPagesDir, remediationsDir str
 }
 
 func hasDefsecOverride(remediationFile string) bool {
-	if avdID := getAVDIDByCSPMPath(remediationFile); avdID != "" {
-		// log.Printf("Override detected: '%s' has been overridden by '%s'\n", remediationFile, avdID)
+	if cvedbID := getAVDIDByCSPMPath(remediationFile); cvedbID != "" {
+		// log.Printf("Override detected: '%s' has been overridden by '%s'\n", remediationFile, cvedbID)
 		return true
 	}
 	return false
@@ -237,7 +237,7 @@ severity: "unknown"
 category: misconfig
 keywords: "{{ .Keyword }}"
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 breadcrumbs: 
   - name: {{ .ProviderName }}

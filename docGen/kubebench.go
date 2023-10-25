@@ -10,8 +10,8 @@ import (
 
 	"path/filepath"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
-	"github.com/khulnasoft-lab/avd-generator/util"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/util"
 	"gopkg.in/yaml.v3"
 )
 
@@ -163,7 +163,7 @@ breadcrumbs:
     path: /compliance/kubernetes/{{ .Version}}/{{ .Version}}-{{ .ParentID}}
 
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 ---
 

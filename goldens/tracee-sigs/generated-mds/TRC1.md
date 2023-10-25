@@ -23,7 +23,7 @@ breadcrumbs:
   - name: Persistence
     path: /tracker/persistence
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 ---
 
 ### Standard Input Output Over Socket

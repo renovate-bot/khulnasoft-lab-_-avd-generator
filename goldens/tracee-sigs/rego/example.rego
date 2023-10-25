@@ -1,1 +1,1 @@
-a mock example file which should be ignored by avd generator
+a mock example file which should be ignored by cvedb generator

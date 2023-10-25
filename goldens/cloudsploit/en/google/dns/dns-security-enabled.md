@@ -1,6 +1,6 @@
 ---
 title: DNS Security Enabled
-avd_page_type: cloudsploit_page
+cvedb_page_type: cloudsploit_page
 ---
 
 # GOOGLE / DNS / DNS Security Enabled

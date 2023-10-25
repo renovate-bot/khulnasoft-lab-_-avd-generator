@@ -1,4 +1,4 @@
-module github.com/khulnasoft-lab/avd-generator
+module github.com/khulnasoft-lab/cvedb-generator
 
 go 1.18
 

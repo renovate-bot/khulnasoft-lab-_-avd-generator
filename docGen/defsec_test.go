@@ -15,7 +15,7 @@ func TestLoadsAsExpected(t *testing.T) {
 
 	generateDefsecPages("../goldens/defsec/md", tempDir)
 
-	ids := []string{"avd-aws-0018"}
+	ids := []string{"cvedb-aws-0018"}
 
 	for _, id := range ids {
 		content, err := os.ReadFile(fmt.Sprintf("%s/aws/code-build/%s.md", tempDir, id))

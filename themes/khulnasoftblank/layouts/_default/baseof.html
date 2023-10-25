@@ -23,7 +23,7 @@
 	{{ .Scratch.Set "seo_title" .Title | safeHTML }}
 	{{ .Scratch.Add "seo_title" " | Vulnerability Database | Khulnasoft Security" }}
 
-		{{ if eq "nvd_page" .Params.avd_page_type }}
+		{{ if eq "nvd_page" .Params.cvedb_page_type }}
 			{{ .Scratch.Set "seo_description" .Title | safeHTML }}
 			{{ .Scratch.Add "seo_description" " Vulnerability, " }}
 			{{ .Scratch.Add "seo_description" "Severity " }}
@@ -49,10 +49,10 @@
 	<meta property="og:site_name" content="Khulnasoft Vulnerability Database" />
 	<meta property="og:description" content="{{ .Scratch.Get "seo_description" }}" />
 
-	<link rel="stylesheet" href='{{ "css/avdblank.min.css" | relURL }}'>
+	<link rel="stylesheet" href='{{ "css/cvedbblank.min.css" | relURL }}'>
 	<link rel="stylesheet" href='{{ "css/syntax.css" | relURL }}'>
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-	<script type='text/javascript' src='{{ "js/avdblank.js" | relURL }}'></script>
+	<script type='text/javascript' src='{{ "js/cvedbblank.js" | relURL }}'></script>
 	<script type='text/javascript' src='{{ "js/iac.js" | relURL }}'></script>
 
 <!-- Google Tag Manager -->

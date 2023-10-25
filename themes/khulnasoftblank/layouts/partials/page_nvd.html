@@ -1,5 +1,5 @@
 <!-- hero starts -->
-<div class="avd_hero_wrap animatable">
+<div class="cvedb_hero_wrap animatable">
 	<div class="hero header_wrap is-primary"><!--  is-small -->
 		<!-- header starts -->
 		
@@ -38,20 +38,20 @@
 
 <!-- content starts -->
 
-<div class="section avdcve_wrap animatable">
+<div class="section cvedbcve_wrap animatable">
 	<div class="clearboth container">
 
 
 			<div class="columns is-multiline reverse-columns">
 				
 				<div class="column is-4-desktop is-6-tablet is-12-mobile fadeInUp animationDelay_5">
-					<div class="avdcve_sidebar_wrap">
+					<div class="cvedbcve_sidebar_wrap">
 
-						<div class="avd_sidebar_widget avdcve_scores_wrap">
+						<div class="cvedb_sidebar_widget cvedbcve_scores_wrap">
 							
 							
 
-							<div class="avdcve_scores_cvss {{ if and (not (eq .Params.cvss_nvd_v3_score "-")) (not (eq .Params.cvss_nvd_v3_score "N/A")) }}cvss_{{ math.Round (float (.Params.cvss_nvd_v3_score)) }}{{ end }}">
+							<div class="cvedbcve_scores_cvss {{ if and (not (eq .Params.cvss_nvd_v3_score "-")) (not (eq .Params.cvss_nvd_v3_score "N/A")) }}cvss_{{ math.Round (float (.Params.cvss_nvd_v3_score)) }}{{ end }}">
 
 										<div class="large_score_wrap">
 
@@ -95,9 +95,9 @@
 										</div><!-- score_bar -->
 
 	
-							</div><!-- avdcve_scores_cvss -->
+							</div><!-- cvedbcve_scores_cvss -->
 
-							<div class="avdcve_scores_additional">
+							<div class="cvedbcve_scores_additional">
 		
 								<!--
 								<div class="score_bar redhat score_bar_7">
@@ -148,13 +148,13 @@
 
 											
 
-							</div><!-- avdcve_scores_additional -->				
+							</div><!-- cvedbcve_scores_additional -->				
 
-						</div><!-- avdcve_scores_wrap -->
+						</div><!-- cvedbcve_scores_wrap -->
 
 
 						{{ if or (.Params.sidebar_additional_info_nvd) (.Params.sidebar_additional_info_cwe) }}
-							<div class="avd_sidebar_widget avdcve_info_wrap">
+							<div class="cvedb_sidebar_widget cvedbcve_info_wrap">
 								<div class="sidebar_widget_title">Additional information</div>
 									<table class="table sidebar_links_table">
 									{{ if .Params.sidebar_additional_info_nvd }}
@@ -165,11 +165,11 @@
 										<tr><th>CWE</th><td><a href="{{ .Params.sidebar_additional_info_cwe }}">{{ .Params.sidebar_additional_info_cwe }}</a></td></tr>
 									{{ end }}
 									</table>
-							</div><!-- avdcve_info_wrap -->	
+							</div><!-- cvedbcve_info_wrap -->	
 						{{ end }}
 						
 
-					</div><!-- avdcve_sidebar_wrap -->
+					</div><!-- cvedbcve_sidebar_wrap -->
 
 				</div><!-- is-4 -->
 

@@ -12,7 +12,7 @@ severity: "unknown"
 category: misconfig
 keywords: "aws/acm/acm-certificate-validation"
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 
 breadcrumbs: 
   - name: AWS

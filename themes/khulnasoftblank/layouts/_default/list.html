@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-	{{ if eq "cloudsploit_page" .Params.avd_page_type }}
+	{{ if eq "cloudsploit_page" .Params.cvedb_page_type }}
 		{{ partial "list_cloudsploit.html" . }}
-	{{ else if eq "toplevel_page" .Params.avd_page_type }}
+	{{ else if eq "toplevel_page" .Params.cvedb_page_type }}
 		{{ partial "list_toplevel.html" . }}
 	{{else}}
-		{{ partial "list_avd.html" . }}
+		{{ partial "list_cvedb.html" . }}
 	{{ end }}
 	
 {{ end }}

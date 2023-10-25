@@ -5,4 +5,4 @@ vuln-list
 kube-hunter-repo
 .idea
 .DS_Store
-avd-repo
+cvedb-repo

@@ -1,11 +1,11 @@
-/* avd_homepage */
+/* cvedb_homepage */
 
-.avd_hero_wrap.homepage_hero {
+.cvedb_hero_wrap.homepage_hero {
 	position: relative;
 	z-index: 10;
 
 	.hero {
-		background-image: url('../images/avd_homepage_hero_bg.jpg');
+		background-image: url('../images/cvedb_homepage_hero_bg.jpg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -64,7 +64,7 @@
 	}
 
 	.project_item {
-		//moved to avd_project_cta.scss
+		//moved to cvedb_project_cta.scss
 
 	}
 

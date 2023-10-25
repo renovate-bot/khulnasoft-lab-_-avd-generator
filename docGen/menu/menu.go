@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/khulnasoft-lab/avd-generator/util"
+	"github.com/khulnasoft-lab/cvedb-generator/util"
 )
 
 var headingMap = map[string]string{
@@ -239,7 +239,7 @@ breadcrumbs:
     url: {{ .Url }}
 {{ end }}
 
-avd_page_type: {{ .PageType }}
+cvedb_page_type: {{ .PageType }}
 ---
 
 `
@@ -267,7 +267,7 @@ breadcrumbs:
     path: {{ .Url }}
 {{ end }}
 
-avd_page_type: {{ .PageType }}
+cvedb_page_type: {{ .PageType }}
 ---
 
 `

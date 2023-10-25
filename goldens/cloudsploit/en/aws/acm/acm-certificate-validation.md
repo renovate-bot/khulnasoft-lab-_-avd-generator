@@ -1,6 +1,6 @@
 ---
 title: ACM Certificate Validation
-avd_page_type: cloudsploit_page
+cvedb_page_type: cloudsploit_page
 ---
 
 # AWS / ACM / ACM Certificate Validation

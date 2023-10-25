@@ -20,7 +20,7 @@ import (
 
 	"github.com/valyala/fastjson"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
 	"github.com/khulnasoft-lab/vuln-list-update/redhat"
 	"github.com/khulnasoft-lab/vuln-list-update/ubuntu"
 )
@@ -182,7 +182,7 @@ func generateVulnerabilityPages(nvdDir, cweDir, postsDir, year string) {
 	}
 
 	indexFile := filepath.Join(postsDir, "_index.md")
-	if err := menu.NewTopLevelMenu(year, "avd_list", indexFile).
+	if err := menu.NewTopLevelMenu(year, "cvedb_list", indexFile).
 		WithHeading("Vulnerabilties").
 		WithIcon("khulnasoft").
 		WithCategory("vulnerabilities").
@@ -513,7 +513,7 @@ date: {{.Date}}
 category: vulnerabilities
 draft: false
 
-avd_page_type: nvd_page
+cvedb_page_type: nvd_page
 
 date_published: {{.Vulnerability.Dates.Published}}
 date_modified: {{.Vulnerability.Dates.Modified}}
@@ -587,7 +587,7 @@ date: {{.Date}}
 draft: false
 category: vulnerabilities
 
-avd_page_type: reserved_page
+cvedb_page_type: reserved_page
 ---
 
 This vulnerability is marked as __RESERVED__ by NVD. This means that the CVE-ID is reserved for future use

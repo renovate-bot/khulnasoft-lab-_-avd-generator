@@ -1,7 +1,7 @@
-/* avd cve page */
-.page-avd-cve {}
+/* cvedb cve page */
+.page-cvedb-cve {}
 
-.avdcve_wrap {}
+.cvedbcve_wrap {}
 
 .vulnerability_content_wrap {
 
@@ -94,9 +94,9 @@
 }
 
 
-.avdcve_sidebar_wrap {
+.cvedbcve_sidebar_wrap {
 
-	.avd_sidebar_widget {
+	.cvedb_sidebar_widget {
 		margin-bottom: $gap;
 		color: $aq-dark-abyss;
 		@include neo_box_light-bg;
@@ -134,7 +134,7 @@
 			//td
 		}
 
-		&.avdcve_scores_wrap {
+		&.cvedbcve_scores_wrap {
 			background-color: #ffffff;
 		}
 
@@ -143,7 +143,7 @@
 
 
 
-.avdcve_scores_cvss {
+.cvedbcve_scores_cvss {
 
 	background-color: rgba($aq-ocean-ash, 0.1);
 	position: relative;
@@ -284,20 +284,20 @@
 	&.cvss_1,
 	&.cvss_2,
 	&.cvss_3 {
-		background-color: rgba($aq-avd-yellow, 0.1);
+		background-color: rgba($aq-cvedb-yellow, 0.1);
 
 		&:before {
-			background-color: $aq-avd-yellow;
+			background-color: $aq-cvedb-yellow;
 		}
 	}
 
 	&.cvss_4,
 	&.cvss_5,
 	&.cvss_6 {
-		background-color: rgba($aq-avd-orange, 0.1);
+		background-color: rgba($aq-cvedb-orange, 0.1);
 
 		&:before {
-			background-color: $aq-avd-orange;
+			background-color: $aq-cvedb-orange;
 		}
 	}
 
@@ -305,14 +305,14 @@
 	&.cvss_8,
 	&.cvss_9,
 	&.cvss_10 {
-		background-color: rgba($aq-avd-red, 0.1);
+		background-color: rgba($aq-cvedb-red, 0.1);
 
 		&:before {
-			background-color: $aq-avd-red;
+			background-color: $aq-cvedb-red;
 		}
 
 		.score_gague_content {
-			color: $aq-avd-red;
+			color: $aq-cvedb-red;
 		}
 	}
 
@@ -376,18 +376,18 @@
 	}
 }
 
-//avdcve_scores_cvss
+//cvedbcve_scores_cvss
 
 
 
-.avdcve_scores_additional {
+.cvedbcve_scores_additional {
 
 	//border-bottom-right-radius: 4px;
 	//border-bottom-left-radius: 4px;
 
 }
 
-//avdcve_scores_additional
+//cvedbcve_scores_additional
 
 
 .score_bar {

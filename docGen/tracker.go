@@ -12,8 +12,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/khulnasoft-lab/avd-generator/menu"
-	"github.com/khulnasoft-lab/avd-generator/util"
+	"github.com/khulnasoft-lab/cvedb-generator/menu"
+	"github.com/khulnasoft-lab/cvedb-generator/util"
 	"github.com/khulnasoft-lab/tracker/pkg/rules/regosig"
 )
 
@@ -303,7 +303,7 @@ breadcrumbs:
   - name: {{ .ParentName }}
     path: /tracker/{{ .ParentID }}
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 ---
 
 ### {{.Title}}

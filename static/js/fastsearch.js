@@ -70,10 +70,10 @@ document.getElementById("searchInput").onkeyup = function (e) {
 // apiKey: read-only public secret: https://docs.meilisearch.com/reference/features/authentication.html#key-types
 function loadMeiliSearch() {
     meilisearch = new MeiliSearch({
-        host: 'https://avdsearch.khulnasoft.com',
+        host: 'https://cvedbsearch.khulnasoft.com',
         apiKey: "d182155a23f2f0acaafbb882a68cbd0080a5b1a47749712d4b704dad03899303", // this is a read-only public key, *not a secret*
     })
-    meilisearchIndex = meilisearch.getIndex('avd');
+    meilisearchIndex = meilisearch.getIndex('cvedb');
 }
 
 // ==========================================

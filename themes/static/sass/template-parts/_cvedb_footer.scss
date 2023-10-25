@@ -1,5 +1,5 @@
-/* avd_footer_wrap */
-.avd_footer_wrap {
+/* cvedb_footer_wrap */
+.cvedb_footer_wrap {
 	background-color: $aq-dark-abyss;
 	color: $white;
 	position: relative;
@@ -62,7 +62,7 @@
 	min-height: 40vh;
 }
 
-.avd_footer_cta_wrap + .avd_footer_wrap {
+.cvedb_footer_cta_wrap + .cvedb_footer_wrap {
 	//remove the space when it's after the footer_cta_wrap
 	margin-top: 0em;
 } //footer-cap-cta + footer_wrap

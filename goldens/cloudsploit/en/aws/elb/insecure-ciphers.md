@@ -1,6 +1,6 @@
 ---
 title: Insecure Ciphers
-avd_page_type: cloudsploit_page
+cvedb_page_type: cloudsploit_page
 ---
 
 # AWS / ELB / Insecure Ciphers
@@ -19,7 +19,7 @@ avd_page_type: cloudsploit_page
 
 ## Detailed Remediation Steps
 1. Log into the AWS Management Console.
-2. Select the "Services" option and search for EC2. </br> <img src="/assets/avd-flowchart.png"/>
+2. Select the "Services" option and search for EC2. </br> <img src="/assets/cvedb-flowchart.png"/>
 3. In the "EC2 Dashboard" scroll down and look for "Load Balancers" and click on "Load Balancers" to get into "Load Balancers" dashboard.</br> <img src="/resources/aws/elb/insecure-ciphers/step3.png"/>
 4. Select the "Load Balancer" which needs to be verified. </br> <img src="/resources/aws/elb/insecure-ciphers/step4.png"/>
 5. Select the "Listeners" tab from the bottom panel and scroll down to the "Cipher" column of HTTPS Listener and click on "Change" option.</br> <img src="/resources/aws/elb/insecure-ciphers/step5.png"/>

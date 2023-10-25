@@ -225,7 +225,7 @@ date: 2020-05-13 12:01:15 +0000
 category: vulnerabilities
 draft: false
 
-avd_page_type: nvd_page
+cvedb_page_type: nvd_page
 
 date_published: 2020-05-13T00:01Z
 date_modified: 2020-05-18T00:17Z
@@ -324,7 +324,7 @@ date: 2020-01-08 12:19:15 +0000
 category: vulnerabilities
 draft: false
 
-avd_page_type: nvd_page
+cvedb_page_type: nvd_page
 
 date_published: 2020-01-08T19:15Z
 date_modified: 2020-01-14T21:52Z
@@ -471,7 +471,7 @@ title: "CVE-2020-0002"
 date: 2020-01-08 12:19:15 +0000
 draft: false
 
-avd_page_type: nvd_page
+cvedb_page_type: nvd_page
 
 date_published: 2020-01-08 12:19:15 +0000
 date_modified: 2020-01-29 12:21:15 +0000
@@ -581,7 +581,7 @@ title: "CVE-2020-0002"
 date: 2020-01-08 12:19:15 +0000
 draft: false
 
-avd_page_type: nvd_page
+cvedb_page_type: nvd_page
 
 date_published: 2020-01-08 12:19:15 +0000
 date_modified: 2020-01-29 12:21:15 +0000
@@ -686,7 +686,7 @@ date: 2021-04-15T20:55:39Z
 draft: false
 category: vulnerabilities
 
-avd_page_type: reserved_page
+cvedb_page_type: reserved_page
 ---
 
 This vulnerability is marked as __RESERVED__ by NVD. This means that the CVE-ID is reserved for future use

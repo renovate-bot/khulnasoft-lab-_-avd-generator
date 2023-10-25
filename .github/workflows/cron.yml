@@ -25,68 +25,68 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Create build folder
-        run:  mkdir avd-repo
+        run:  mkdir cvedb-repo
 
       - name: Checkout public vuln-list-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/vuln-list
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/vuln-list
+          path: cvedb-repo/vuln-list
 
       - name: Checkout public kube-hunter-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/kube-hunter
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/kube-hunter-repo
+          path: cvedb-repo/kube-hunter-repo
 
       - name: Checkout public cloud-security-remediation-guides-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/cloud-security-remediation-guides
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/remediations-repo
+          path: cvedb-repo/remediations-repo
 
       - name: Checkout public tracker-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/tracker
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/tracker-repo
+          path: cvedb-repo/tracker-repo
 
       - name: Checkout public cloudsploit-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/cloudsploit
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/cloudsploit-repo
+          path: cvedb-repo/cloudsploit-repo
 
       - name: Checkout public defsec-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/defsec
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/defsec-repo
+          path: cvedb-repo/defsec-repo
 
       - name: Checkout public kube-bench-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/kube-bench
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/kube-bench-repo
+          path: cvedb-repo/kube-bench-repo
 
       - name: Checkout private chain-bench-repo
         uses: actions/checkout@v3
         with:
           repository: khulnasoft-lab/oss-chain-bench
           token: ${{ secrets.ORG_REPO_TOKEN }}
-          path: avd-repo/chain-bench-repo
+          path: cvedb-repo/chain-bench-repo
 
       - name: Build generator
         run: make md-clean md-build
 
-      - name: Sync avd-repo with latest changes from generator
+      - name: Sync cvedb-repo with latest changes from generator
         run: make sync-all
 
       - name: Build and Generate Markdown pages
@@ -100,14 +100,14 @@ jobs:
 
       - name: Deploy Search Index to MeiliSearch Instance
         run: |
-          cd avd-repo
-          curl -H 'Content-Type: application/json' -H 'X-Meili-API-Key: ${{ secrets.SEARCHAPITOKEN }}' -X POST ${{ secrets.SEARCHAPIHOST }}/indexes/avd/documents --data @docs/searchindex.json
+          cd cvedb-repo
+          curl -H 'Content-Type: application/json' -H 'X-Meili-API-Key: ${{ secrets.SEARCHAPITOKEN }}' -X POST ${{ secrets.SEARCHAPIHOST }}/indexes/cvedb/documents --data @docs/searchindex.json
 
       - name: Install AWS CLI
         run: pip3 install awscli
 
       - name: Sync changes to the bucket
-        run: aws s3 sync --no-progress --only-show-errors --size-only avd-repo/docs ${{ secrets.PROD_AVD_BUCKET }}
+        run: aws s3 sync --no-progress --only-show-errors --size-only cvedb-repo/docs ${{ secrets.PROD_AVD_BUCKET }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PROD_AVD_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PROD_AVD_SECRET_ACCESS_KEY }}

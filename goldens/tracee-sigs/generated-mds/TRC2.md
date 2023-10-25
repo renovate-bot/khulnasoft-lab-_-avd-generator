@@ -23,7 +23,7 @@ breadcrumbs:
   - name: Defense Evasion
     path: /tracker/defense-evasion
 
-avd_page_type: avd_page
+cvedb_page_type: cvedb_page
 ---
 
 ### Anti Debugging

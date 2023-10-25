@@ -1,5 +1,5 @@
-<!-- avd header starts -->
-<div class="avd_header_wrap">
+<!-- cvedb header starts -->
+<div class="cvedb_header_wrap">
 	<div class="header_navbar_wrap">
 		<nav class="navbar">
 			<div class="container is-small">
@@ -24,11 +24,11 @@
 								</p>
 							</div>-->
 
-						{{ if and (not .IsHome) (not (eq "search_page" .Params.avd_page_type)) }}
-						<!--<input type="text" class="avd_header_search" placeholder="{{ .Site.Params.banner.placeholder }}" />-->
+						{{ if and (not .IsHome) (not (eq "search_page" .Params.cvedb_page_type)) }}
+						<!--<input type="text" class="cvedb_header_search" placeholder="{{ .Site.Params.banner.placeholder }}" />-->
 						<div class="navbar-item">
 							<div id="fastSearch" class="search_box_wrap">
-								<input id="searchInput" class="avd_header_search"
+								<input id="searchInput" class="cvedb_header_search"
 									placeholder="{{ .Site.Params.banner.placeholder }}" tabindex="0">
 								<div class="content search_results_list_wrap">
 									<ul id="search_results_list"></ul>
@@ -66,5 +66,5 @@
 
 
 
-</div><!-- avd_header_wrap -->
-<!-- avd header ends -->
+</div><!-- cvedb_header_wrap -->
+<!-- cvedb header ends -->
